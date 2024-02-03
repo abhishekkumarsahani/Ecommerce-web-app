@@ -62,7 +62,7 @@ font-family: 'Playfair Display', serif;
 
 .pnf {
   display: flex;
-  min-height: 65vh;
+  min-height: 75vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -115,3 +115,10 @@ font-family: 'Playfair Display', serif;
   border-radius: 8px;
 }
 
+.register{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  flex-direction: column;
+}

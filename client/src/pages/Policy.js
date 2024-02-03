@@ -13,13 +13,18 @@ const Policy = () => {
           />
         </div>
         <div className="col-md-4">
-          <p>add privacy policy</p>
-          <p>add privacy policy</p>
-          <p>add privacy policy</p>
-          <p>add privacy policy</p>
-          <p>add privacy policy</p>
-          <p>add privacy policy</p>
-          <p>add privacy policy</p>
+          <p>
+            Welcome to our eCommerce web app's Privacy Policy. Your privacy is
+            important to us, and we are committed to protecting your personal
+            information. This Privacy Policy explains how we collect, use,
+            disclose, and safeguard your information when you visit our website.
+          </p>
+          <h3>Information We Collect</h3>
+          <p>
+            We collect information that you provide to us voluntarily, such as
+            your name, email address, and other personal details when you
+            interact with our website.
+          </p>
         </div>
       </div>
     </Layout>
