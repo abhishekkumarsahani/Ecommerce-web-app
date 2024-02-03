@@ -36,7 +36,7 @@ font-family: 'Playfair Display', serif;
 /* css for the footer */
 .footer {
   color: white;
-  padding: 25px;
+  padding: 15px;
   background: #87CEEB; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -100,3 +100,18 @@ font-family: 'Playfair Display', serif;
   border: 1px solid #2980b9; /* Darken border on hover */
   color: #fff; /* Lighten text color on hover */
 }
+
+/* ========================================= */
+/* =========contact us ========= */
+.contactus {
+  margin: 0;
+  padding: 0;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contactus img {
+  border-radius: 8px;
+}
+
