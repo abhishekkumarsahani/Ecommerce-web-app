@@ -3,7 +3,7 @@ import {
   registerController,
   loginController,
   testController,
-  // forgotPasswordController,
+  forgotPasswordController,
   // updateProfileController,
   // getOrdersController,
   // getAllOrdersController,
@@ -20,11 +20,19 @@ router.post("/register", registerController);
 
 router.post("/login", loginController);
 
+//Forgot Password || POST
+router.post("/forgot-password", forgotPasswordController);
+
 //test routes
 router.get("/test", requireSignIn,isAdmin,  testController);
 
-//protected route auth
+//protected route auth for the Users
 router.get("/user-auth", requireSignIn, (req,res)=>{
+  res.status(200).send({ok: true});
+});
+
+//protected route auth for the Admin
+router.get("/admin-auth", requireSignIn,isAdmin, (req,res)=>{
   res.status(200).send({ok: true});
 });
 
