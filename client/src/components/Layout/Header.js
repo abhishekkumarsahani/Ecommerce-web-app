@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
-import { TiShoppingCart } from "react-icons/ti";
 import { useAuth } from "../../context/auth";
 import toast from "react-hot-toast";
 
@@ -32,21 +31,20 @@ const Header = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <Link to="/" className="navbar-brand">
-              <TiShoppingCart />
-              Ecommerce App
+              🛒 Ecommerce App
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink to="/" className="nav-link" aria-current="page">
+                <NavLink to="/" className="nav-link ">
                   Home
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/category" className="nav-link">
+                <NavLink to="/category" className="nav-link ">
                   Category
                 </NavLink>
               </li>
-              {!auth.user ? (
+              {!auth?.user ? (
                 <>
                   <li className="nav-item">
                     <NavLink to="/register" className="nav-link">
@@ -71,11 +69,14 @@ const Header = () => {
                     >
                       {auth?.user?.name}
                     </NavLink>
-                    <ul className="dropdown-menu ">
+                    <ul className="dropdown-menu">
                       <li>
-                        <NavLink  to={`/dashboard/${
+                        <NavLink
+                          to={`/dashboard/${
                             auth?.user?.role === 1 ? "admin" : "user"
-                          }`} className="dropdown-item">
+                          }`}
+                          className="dropdown-item"
+                        >
                           Dashboard
                         </NavLink>
                       </li>
@@ -98,10 +99,6 @@ const Header = () => {
                 </NavLink>
               </li>
             </ul>
-            {/* <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form> */}
           </div>
         </div>
       </nav>
