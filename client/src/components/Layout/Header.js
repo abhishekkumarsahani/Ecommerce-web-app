@@ -22,7 +22,7 @@ const Header = () => {
   };
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -72,6 +72,7 @@ const Header = () => {
                   ))}
                 </ul>
               </li>
+
               {!auth?.user ? (
                 <>
                   <li className="nav-item">
@@ -93,7 +94,7 @@ const Header = () => {
                       href="#"
                       role="button"
                       data-bs-toggle="dropdown"
-                      aria-expanded="false"
+                      style={{ border: "none" }}
                     >
                       {auth?.user?.name}
                     </NavLink>
