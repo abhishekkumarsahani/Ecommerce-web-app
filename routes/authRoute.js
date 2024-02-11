@@ -7,6 +7,7 @@ import {
   updateProfileController,
   getOrdersController,
   getAllOrdersController,
+  orderStatusController,
   // updateProfileController,
   // getOrdersController,
   // getAllOrdersController,
@@ -47,6 +48,14 @@ router.get("/orders", requireSignIn, getOrdersController);
 
 //all orders
 router.get("/all-orders", requireSignIn, isAdmin, getAllOrdersController);
+
+// order status update
+router.put(
+  "/order-status/:orderId",
+  requireSignIn,
+  isAdmin,
+  orderStatusController
+);
 
 
 export default router;
